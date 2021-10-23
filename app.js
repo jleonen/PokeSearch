@@ -176,10 +176,17 @@ const searchPokemon = async function () {
     const pokeInfo = await data.json();
 
     //LOCATION DATA
-    const locationArray = await getLocation(pokeInfo);
+    // const locationArray = await getLocation(pokeInfo);
 
-    //PREVIOUS EVOLUTION DATA
-    const evoName = await showEvo(pokeInfo);
+    // //PREVIOUS EVOLUTION DATA
+    // const evoName = await showEvo(pokeInfo);
+
+    const additonalData = await Promise.all([
+      getLocation(pokeInfo),
+      showEvo(pokeInfo),
+    ]);
+
+    const [locationArray, evoName] = additonalData;
 
     // const location = await fetch(pokeInfo.location_area_encounters);
     // const locationData = await location.json();
