@@ -17,6 +17,10 @@ h2 {
   text-align: center;
 }
 
+body {
+  background-color: f8edeb;
+}
+
 .fa-angle-double-right {
   /* display: flex;
   justify-content: space-between; */
@@ -100,4 +104,16 @@ h2 {
 
 .location-info {
   height: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.welcome-section {
+  background-color: e8e8e4;
+  height: 100%;
+  text-align: center;
 }
