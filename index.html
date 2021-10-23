@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <title>PokeSearch Project</title>
+    <script defer src="app.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/b52e743aa9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h2>Enter the pokemon you want to search for</h2>
+    <div class="main-container">
+      <div class="container">
+        <div class="card" style="width: 18rem">
+          <img src="pokeball.png" class="card-img-top" alt="Pokemon img" />
+          <div class="card-body">
+            <h5 class="card-title">Pokemon Name</h5>
+            <p class="card-text">
+              <strong>Evolves from:</strong>
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>Type:</strong></li>
+            <div class="flex-container">
+              <li class="list-group-item">Ability 1</li>
+              <i class="ability1 fas fa-angle-double-right fa-2x"></i>
+            </div>
+            <div class="flex-container">
+              <li class="list-group-item">Ability 2</li>
+              <i class="ability2 fas fa-angle-double-right fa-2x"></i>
+            </div>
+            <div class="flex-container">
+              <li class="list-group-item"><strong>Locations:</strong></li>
+              <i class="fas fa-angle-double-right fa-2x"></i>
+            </div>
+          </ul>
+          <div class="card-body">
+            <input type="text" name="searchValue" class="chosenPokemon" />
+            <button
+              class="searchButton"
+              type="submit"
+              onclick="searchPokemon()"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Hidden Container Divs -->
+    <div class="ability-info hidden">
+      <button class="close-ability">&times;</button>
+      <h2 class="ability-name"></h2>
+      <h4><strong>Description</strong></h4>
+      <p class="ability-description"></p>
+    </div>
+    <!-- Hidden Location Info -->
+    <div class="overlay hidden"></div>
+    <div class="location-info hidden">
+      <button class="close-location">&times;</button>
+      <h2>Locations</h2>
+      <div class="locationList"></div>
+      <p class="location-description"></p>
+    </div>
+    <div class="overlay hidden"></div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
